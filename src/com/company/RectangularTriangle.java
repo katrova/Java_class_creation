@@ -61,23 +61,29 @@ public class RectangularTriangle {
     //____________________________________________________________
 
    // 3. 5 methods.
+
+   // Method considers hypotenuse using two sides
     public double getHypotenuse(){
         return Math.sqrt(this.getSideA()*this.getSideA() + this.getSideB()*this.getSideB());
 
     }
 
+//    The method calculates the perimeter using the sum of the three sides of the triangle
     public double getPerimeter(){
       return  this.getSideA() + this.getSideB() + this.getHypotenuse();
     }
 
+//    The method calculates area using rectangle theorem
     public double getArea(){
         return 0.5 * this.getSideA() * this.getSideB();
     }
 
+//    The method considers the height using the product of two sides divided by the hypotenuse
     public double getHeight(){
         return this.getSideA() * this.getSideB() / this.getHypotenuse();
     }
 
+//    The method that checks if a triangle exists
     public boolean isTriangle(){
         return (this.getSideA()>0 && this.getSideB()>0);
     }
